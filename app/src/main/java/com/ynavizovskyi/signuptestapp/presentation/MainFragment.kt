@@ -27,9 +27,16 @@ class MainFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
+            vieModel.logOut()
+        }
+        observeData()
+    }
+
+    private fun observeData(){
+        vieModel.logOutLiveData.observe(viewLifecycleOwner){
             findNavController().navigate(R.id.action_MainFragment_to_SignInFragment)
         }
-//        observeData()
+        //Ideally we would observe session manager session state, but I don't have time for that ¯\_(ツ)_/¯
     }
 
 
