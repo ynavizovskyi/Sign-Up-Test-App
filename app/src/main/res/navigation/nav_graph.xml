@@ -3,26 +3,27 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/nav_graph"
-        app:startDestination="@id/FirstFragment">
+        app:startDestination="@id/signInFragment">
 
     <fragment
-            android:id="@+id/FirstFragment"
-            android:name="com.ynavizovskyi.signuptestapp.FirstFragment"
-            android:label="@string/first_fragment_label"
-            tools:layout="@layout/fragment_first">
+            android:id="@+id/signInFragment"
+            android:name="com.ynavizovskyi.signuptestapp.SignInFragment"
+            android:label="@string/sign_in_fragment_label"
+            tools:layout="@layout/fragment_sign_in">
 
         <action
-                android:id="@+id/action_FirstFragment_to_SecondFragment"
-                app:destination="@id/SecondFragment" />
+                android:id="@+id/action_SignInFragment_to_MainFragment"
+                app:destination="@id/mainFragment" />
     </fragment>
+
     <fragment
-            android:id="@+id/SecondFragment"
-            android:name="com.ynavizovskyi.signuptestapp.SecondFragment"
-            android:label="@string/second_fragment_label"
-            tools:layout="@layout/fragment_second">
+            android:id="@+id/mainFragment"
+            android:name="com.ynavizovskyi.signuptestapp.MainFragment"
+            android:label="@string/main_fragment_label"
+            tools:layout="@layout/fragment_main">
 
         <action
-                android:id="@+id/action_SecondFragment_to_FirstFragment"
-                app:destination="@id/FirstFragment" />
+                android:id="@+id/action_MainFragment_to_SignInFragment"
+                app:destination="@id/signInFragment" />
     </fragment>
 </navigation>
