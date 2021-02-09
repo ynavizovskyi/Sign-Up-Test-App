@@ -1,4 +1,4 @@
-package com.ynavizovskyi.signuptestapp.presentation
+package com.ynavizovskyi.signuptestapp.presentation.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

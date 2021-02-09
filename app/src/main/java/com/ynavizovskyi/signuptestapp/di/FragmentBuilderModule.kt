@@ -1,7 +1,7 @@
 package com.ynavizovskyi.signuptestapp.di
 
-import com.ynavizovskyi.signuptestapp.presentation.MainFragment
-import com.ynavizovskyi.signuptestapp.presentation.SignInFragment
+import com.ynavizovskyi.signuptestapp.presentation.main.MainFragment
+import com.ynavizovskyi.signuptestapp.presentation.signin.SignInFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

@@ -1,11 +1,13 @@
 package com.ynavizovskyi.signuptestapp.data
 
+import com.ynavizovskyi.signuptestapp.common.REMOTE
 import com.ynavizovskyi.signuptestapp.doman.repository.SessionRepository
 import com.ynavizovskyi.signuptestapp.session.SessionManager
 import javax.inject.Inject
+import javax.inject.Named
 
 class SessionRepositoryImpl @Inject constructor(
-    private val remoteStore: SessionDataStore,
+    @Named(REMOTE) private val remoteStore: SessionDataStore,
     private val sessionManager: SessionManager
 ) : SessionRepository {
 

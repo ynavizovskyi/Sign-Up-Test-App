@@ -1,5 +1,6 @@
 package com.ynavizovskyi.signuptestapp.di
 
+import com.ynavizovskyi.signuptestapp.common.REMOTE
 import com.ynavizovskyi.signuptestapp.data.SessionDataStore
 import com.ynavizovskyi.signuptestapp.data.SessionRepositoryImpl
 import com.ynavizovskyi.signuptestapp.datastore.remote.RemoteSessionDataStore
@@ -10,6 +11,7 @@ import com.ynavizovskyi.signuptestapp.session.SessionManager
 import com.ynavizovskyi.signuptestapp.session.SessionManagerImpl
 import dagger.Binds
 import dagger.Module
+import javax.inject.Named
 
 @Module
 abstract class AppModule {
@@ -24,7 +26,8 @@ abstract class AppModule {
     abstract fun bindRepository(repository: SessionRepositoryImpl): SessionRepository
 
     @Binds
-    abstract fun bindDataStore(dataStore: RemoteSessionDataStore): SessionDataStore
+    @Named(REMOTE)
+    abstract fun bindRemoteSessionDataStore(dataStore: RemoteSessionDataStore): SessionDataStore
 
     @Binds
     abstract fun bindSessionManager(manager: SessionManagerImpl): SessionManager

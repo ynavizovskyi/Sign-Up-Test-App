@@ -1,6 +1,6 @@
 package com.ynavizovskyi.signuptestapp.di
 
-import com.ynavizovskyi.signuptestapp.presentation.MainActivity
+import com.ynavizovskyi.signuptestapp.presentation.ContainerActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,7 +8,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityModule {
 
     @ContributesAndroidInjector
-    abstract fun bindMainFragment(): MainActivity?
+    abstract fun bindMainFragment(): ContainerActivity?
 
 
 }
