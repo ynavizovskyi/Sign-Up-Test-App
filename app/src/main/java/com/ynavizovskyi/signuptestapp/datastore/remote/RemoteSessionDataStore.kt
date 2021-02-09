@@ -4,8 +4,10 @@ import com.ynavizovskyi.signuptestapp.data.SessionData
 import com.ynavizovskyi.signuptestapp.data.SessionDataStore
 import kotlinx.coroutines.delay
 import java.lang.Exception
+import javax.inject.Inject
 
-class RemoteSessionDataStore(private val service: SessionService) : SessionDataStore {
+
+class RemoteSessionDataStore @Inject constructor(/*private val service: SessionService*/) : SessionDataStore {
 
     override suspend fun singIn(email: String, password: String): SessionData {
         //Simulate network delay

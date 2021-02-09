@@ -2,8 +2,9 @@ package com.ynavizovskyi.signuptestapp.data
 
 import com.ynavizovskyi.signuptestapp.doman.repository.SessionRepository
 import com.ynavizovskyi.signuptestapp.session.SessionManager
+import javax.inject.Inject
 
-class SessionRepositoryImpl(
+class SessionRepositoryImpl @Inject constructor(
     private val remoteStore: SessionDataStore,
     private val sessionManager: SessionManager
 ) : SessionRepository {

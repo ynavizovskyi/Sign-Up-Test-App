@@ -1,8 +1,9 @@
 package com.ynavizovskyi.signuptestapp.session
 
 import com.ynavizovskyi.signuptestapp.doman.entity.Session
+import javax.inject.Inject
 
-class SessionManagerImpl : SessionManager {
+class SessionManagerImpl @Inject constructor() : SessionManager {
 
     //Emulated storage
     private var session: Session? = null

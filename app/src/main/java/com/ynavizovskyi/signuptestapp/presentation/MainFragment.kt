@@ -8,14 +8,18 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ynavizovskyi.signuptestapp.R
+import com.ynavizovskyi.signuptestapp.presentation.base.BaseFragment
+import javax.inject.Inject
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment() {
+
+    @Inject
+    lateinit var vieModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
@@ -25,5 +29,9 @@ class MainFragment : Fragment() {
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.action_MainFragment_to_SignInFragment)
         }
+//        observeData()
     }
+
+
+
 }

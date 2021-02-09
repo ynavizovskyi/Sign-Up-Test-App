@@ -8,7 +8,10 @@ import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules=arrayOf(AndroidInjectionModule::class))interface AppComponent {
+@Component(
+    modules = [AndroidInjectionModule::class, AppModule::class, ActivityModule::class]
+)
+interface AppComponent {
 
     fun inject(application: SignInApp)
 
